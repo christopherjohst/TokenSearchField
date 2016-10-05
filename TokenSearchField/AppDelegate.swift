@@ -31,7 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet weak var textField: TokenSearchField!
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    window.makeFirstResponder(nil)
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {

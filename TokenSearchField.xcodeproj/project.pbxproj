@@ -11,20 +11,12 @@
 		47643F641D98DBA2009CBE84 /* TokenTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47643F631D98DBA2009CBE84 /* TokenTextView.swift */; };
 		4786BC1E1D8DA9D9001BDFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786BC1D1D8DA9D9001BDFA6 /* AppDelegate.swift */; };
 		4786BC231D8DA9D9001BDFA6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4786BC211D8DA9D9001BDFA6 /* MainMenu.xib */; };
-		4786BC2E1D8DA9DA001BDFA6 /* TokenSearchFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786BC2D1D8DA9DA001BDFA6 /* TokenSearchFieldTests.swift */; };
 		4786BC471D8DA9EA001BDFA6 /* TokenSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786BC461D8DA9EA001BDFA6 /* TokenSearchField.swift */; };
 		47B920091D8E019400089E85 /* TokenAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B920081D8E019400089E85 /* TokenAttachmentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4786BC2A1D8DA9DA001BDFA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4786BC121D8DA9D9001BDFA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4786BC191D8DA9D9001BDFA6;
-			remoteInfo = TokenSearchField;
-		};
-		4786BC351D8DA9DA001BDFA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4786BC121D8DA9D9001BDFA6 /* Project object */;
 			proxyType = 1;
@@ -41,9 +33,6 @@
 		4786BC221D8DA9D9001BDFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4786BC241D8DA9D9001BDFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4786BC291D8DA9DA001BDFA6 /* TokenSearchFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenSearchFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4786BC2D1D8DA9DA001BDFA6 /* TokenSearchFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSearchFieldTests.swift; sourceTree = "<group>"; };
-		4786BC2F1D8DA9DA001BDFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4786BC341D8DA9DA001BDFA6 /* TokenSearchFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenSearchFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4786BC461D8DA9EA001BDFA6 /* TokenSearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenSearchField.swift; sourceTree = "<group>"; };
 		478B1D851D9ECEEF0036C842 /* Fonts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Fonts.playground; sourceTree = "<group>"; };
 		47B920081D8E019400089E85 /* TokenAttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenAttachmentCell.swift; sourceTree = "<group>"; };
@@ -64,13 +53,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4786BC311D8DA9DA001BDFA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				4786BC1C1D8DA9D9001BDFA6 /* TokenSearchField */,
-				4786BC2C1D8DA9DA001BDFA6 /* TokenSearchFieldTests */,
 				4786BC1B1D8DA9D9001BDFA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +69,6 @@
 			children = (
 				4786BC1A1D8DA9D9001BDFA6 /* TokenSearchField.app */,
 				4786BC291D8DA9DA001BDFA6 /* TokenSearchFieldTests.xctest */,
-				4786BC341D8DA9DA001BDFA6 /* TokenSearchFieldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,15 +86,6 @@
 				478B1D851D9ECEEF0036C842 /* Fonts.playground */,
 			);
 			path = TokenSearchField;
-			sourceTree = "<group>";
-		};
-		4786BC2C1D8DA9DA001BDFA6 /* TokenSearchFieldTests */ = {
-			isa = PBXGroup;
-			children = (
-				4786BC2D1D8DA9DA001BDFA6 /* TokenSearchFieldTests.swift */,
-				4786BC2F1D8DA9DA001BDFA6 /* Info.plist */,
-			);
-			path = TokenSearchFieldTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,24 +126,6 @@
 			productReference = 4786BC291D8DA9DA001BDFA6 /* TokenSearchFieldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4786BC331D8DA9DA001BDFA6 /* TokenSearchFieldUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4786BC431D8DA9DA001BDFA6 /* Build configuration list for PBXNativeTarget "TokenSearchFieldUITests" */;
-			buildPhases = (
-				4786BC301D8DA9DA001BDFA6 /* Sources */,
-				4786BC311D8DA9DA001BDFA6 /* Frameworks */,
-				4786BC321D8DA9DA001BDFA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4786BC361D8DA9DA001BDFA6 /* PBXTargetDependency */,
-			);
-			name = TokenSearchFieldUITests;
-			productName = TokenSearchFieldUITests;
-			productReference = 4786BC341D8DA9DA001BDFA6 /* TokenSearchFieldUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,11 +141,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					4786BC281D8DA9DA001BDFA6 = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 4786BC191D8DA9D9001BDFA6;
-					};
-					4786BC331D8DA9DA001BDFA6 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4786BC191D8DA9D9001BDFA6;
@@ -214,7 +162,6 @@
 			targets = (
 				4786BC191D8DA9D9001BDFA6 /* TokenSearchField */,
 				4786BC281D8DA9DA001BDFA6 /* TokenSearchFieldTests */,
-				4786BC331D8DA9DA001BDFA6 /* TokenSearchFieldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,13 +176,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4786BC271D8DA9DA001BDFA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4786BC321D8DA9DA001BDFA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,14 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4786BC2E1D8DA9DA001BDFA6 /* TokenSearchFieldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4786BC301D8DA9DA001BDFA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,11 +211,6 @@
 			isa = PBXTargetDependency;
 			target = 4786BC191D8DA9D9001BDFA6 /* TokenSearchField */;
 			targetProxy = 4786BC2A1D8DA9DA001BDFA6 /* PBXContainerItemProxy */;
-		};
-		4786BC361D8DA9DA001BDFA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4786BC191D8DA9D9001BDFA6 /* TokenSearchField */;
-			targetProxy = 4786BC351D8DA9DA001BDFA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -447,34 +374,6 @@
 			};
 			name = Release;
 		};
-		4786BC441D8DA9DA001BDFA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TokenSearchFieldUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crosscoded.TokenSearchFieldUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TokenSearchField;
-			};
-			name = Debug;
-		};
-		4786BC451D8DA9DA001BDFA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TokenSearchFieldUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crosscoded.TokenSearchFieldUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TokenSearchField;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,15 +400,6 @@
 			buildConfigurations = (
 				4786BC411D8DA9DA001BDFA6 /* Debug */,
 				4786BC421D8DA9DA001BDFA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4786BC431D8DA9DA001BDFA6 /* Build configuration list for PBXNativeTarget "TokenSearchFieldUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4786BC441D8DA9DA001BDFA6 /* Debug */,
-				4786BC451D8DA9DA001BDFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
