@@ -94,8 +94,12 @@ class TokenTextView: NSTextView {
         let attachment: NSTextAttachment = NSTextAttachment()
         attachment.attachmentCell = TokenAttachmentCell(cellTitle: cellTitle!, cellValue: cellValue!)
         let tokenString: NSAttributedString = NSAttributedString(attachment: attachment)
-    
+        
         textStorage?.replaceCharacters(in: tokenRange, with: tokenString)
+
+        typingAttributes = [
+          NSFontAttributeName: NSFont.systemFont(ofSize: 13)
+        ]
       }
     }
   }
