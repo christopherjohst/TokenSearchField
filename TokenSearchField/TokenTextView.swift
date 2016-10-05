@@ -93,13 +93,19 @@ class TokenTextView: NSTextView {
     
         let attachment: NSTextAttachment = NSTextAttachment()
         attachment.attachmentCell = TokenAttachmentCell(cellTitle: cellTitle!, cellValue: cellValue!)
-        let tokenString: NSAttributedString = NSAttributedString(attachment: attachment)
+        
+        let string: NSAttributedString = NSAttributedString(attachment: attachment)
+        let tokenString: NSMutableAttributedString = NSMutableAttributedString(attributedString: string)
+        
+        tokenString.addAttributes([
+          NSFontAttributeName: NSFont.systemFont(ofSize: 13)
+          ], range: NSRange(location: 0, length: tokenString.length))
         
         textStorage?.replaceCharacters(in: tokenRange, with: tokenString)
 
-        typingAttributes = [
-          NSFontAttributeName: NSFont.systemFont(ofSize: 13)
-        ]
+//        typingAttributes = [
+//          NSFontAttributeName: NSFont.systemFont(ofSize: 14)
+//        ]
       }
     }
   }
