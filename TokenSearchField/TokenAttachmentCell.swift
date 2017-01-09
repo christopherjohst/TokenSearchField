@@ -160,17 +160,6 @@ class TokenAttachmentCell: NSTextAttachmentCell {
     draw(withFrame: cellFrame, in: controlView)
   }
 
-  override func highlight(_ flag: Bool, withFrame cellFrame: NSRect, in controlView: NSView?) {
-
-    if (!isHighlighted) {
-      isHighlighted = true
-    } else {
-      isHighlighted = false
-    }
-
-    controlView?.setNeedsDisplay(cellFrame)
-  }
-
   func tokenTitlePathForBounds(bounds: NSRect) -> NSBezierPath {
 
     let titleBoundsRect: NSRect = NSRect(
@@ -265,7 +254,10 @@ class TokenAttachmentCell: NSTextAttachmentCell {
                            of controlView: NSView?,
                            atCharacterIndex charIndex: Int,
                            untilMouseUp flag: Bool) -> Bool {
-    highlight(flag, withFrame: cellFrame, in: controlView)
+
+    let value: [NSValue] = [NSRange(location: charIndex, length: 1) as NSValue]
+    (controlView as? TokenTextView)?.selectedRanges = value
+
     return theEvent.type == NSEventType.leftMouseDown
   }
 
