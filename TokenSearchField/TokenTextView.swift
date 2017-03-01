@@ -54,6 +54,38 @@ class TokenTextView: NSTextView {
     textStorage?.replaceCharacters(in: range, with: replacementString)
   }
 
+  func setHighlightedAtRanges(_ ranges: [NSRange], newHighlight: Bool) {
+    guard let textStorage = self.textStorage else {
+      return
+    }
+
+    for range in ranges {
+      let intersection = NSIntersectionRange(NSMakeRange(0, textStorage.length), range)
+
+      // if range is already deleted
+      if (intersection.length == 0) {
+        continue
+      }
+
+      textStorage.enumerateAttribute(NSAttachmentAttributeName,
+                                      in: intersection,
+                                      options: NSAttributedString.EnumerationOptions(),
+                                      using: { (value: Any?, range: NSRange, stop: UnsafeMutablePointer<ObjCBool>) in
+                                        if let cell = (value as? NSTextAttachment)?.attachmentCell {
+                                          if let tokenSearchField = (cell.attachment?.attachmentCell as? TokenAttachmentCell) {
+                                            tokenSearchField.isHighlighted = newHighlight
+                                          }
+                                        }
+      })
+    }
+  }
+
+  override func setSelectedRanges(_ ranges: [NSValue], affinity: NSSelectionAffinity, stillSelecting stillSelectingFlag: Bool) {
+    setHighlightedAtRanges(self.selectedRanges as [NSRange], newHighlight: false)
+    setHighlightedAtRanges(ranges as [NSRange], newHighlight: true)
+    super.setSelectedRanges(ranges, affinity: affinity, stillSelecting: stillSelectingFlag)
+  }
+
   func tokenComponents(string: String)
     -> (stem: String?, value: String?) {
 
